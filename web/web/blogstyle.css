@@ -1,0 +1,40 @@
+﻿body {
+    font: normal 100% Helvetica, Arial, sans-serif;
+}
+
+
+#page {
+    margin: 40px auto;
+    padding: 0 1em;
+    max-width: 80em;      /* 1280px / 16px = 61.75em */
+}
+
+h1 {
+    font-family: Georgia, serif;
+    font-size: 1.5em;        /* 24px / 16px = 1.5em */
+    margin-left: 12%;    /* 144px / 988px = 0.14575 */
+    width: 70.85%;           /* 700px / 988px = 0.7085 */
+}
+ul {
+    font-size: 0.875em;      /* 14px / 16px = 0.875em */
+}
+
+.entry h2 {
+    margin-left: 12%;    
+    width: 70.85%;          /* 844px / 988px = 0.85425 */
+}
+.entry .info {
+    float: left;
+    width: 10%;          /* 124px / 988px = 0.12551 */
+}
+
+.entry .main {
+    float: left;
+    margin-left: 2%;
+    width: 70.85%;          /* 700px / 844px = 0.82938 */
+}
+.entry .meta {
+  float: right;
+  width: 10%;
+}
+
