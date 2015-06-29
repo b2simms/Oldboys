@@ -7,7 +7,6 @@ img {
     max-width: 100%;
 }
 
-
 #page-wrap {
   text-align: center; 
 }
@@ -24,8 +23,8 @@ img {
 }
 
 .uk-grid {
-    
 }
+
 
 .uk-width-1-5 {
 }
@@ -56,8 +55,10 @@ img {
 .pic {}
 
 
+
+
 body{
-    text-align: center;
+        text-align: center;
         background: #eee url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAMAAAC6sdbXAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF3d3d////riJKgAAAAAJ0Uk5T/wDltzBKAAAAFUlEQVR42mJgBAEGGMmAxAYCgAADAAGGABmnk/7aAAAAAElFTkSuQmCC);
         font: 13px 'trebuchet MS', Arial, Helvetica;
         font-size: 1.8vmin;
@@ -219,11 +220,7 @@ body{
     /* Mobile */
     #menu-trigger {
         display: none;
-    }
-
-    
-
-     
+    }     
 
     /* iPad */
     .no-transition {
@@ -236,3 +233,4 @@ body{
     #menu li:hover > .no-transition {
         display: block;
     }
+

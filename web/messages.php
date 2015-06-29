@@ -1,5 +1,5 @@
 <?php
-
+include 'db.php';
 class Messages {
 function getMessages(){
 	$sql = "SELECT * FROM  Messages ORDER BY message_id desc";

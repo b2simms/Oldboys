@@ -1,17 +1,18 @@
-@media screen and (max-width: 600px) {
+
+@media screen and (max-width: 800px) {
     body {
-        font-size: .8em;
+        font-size: 1em;
     }
     .uk-width-1-5 {
-    	padding-left: 0px;
+        padding-left: 0px;
     }
     .uk-width-3-5 {
-    	padding-left: 0px;
+        padding-left: 0px;
     }
     .container {
-    	padding-right: 0px;
-    	padding-left: 25px;
-    }
+        padding-right: 0px;
+        padding-left: 25px;
+    }    
 
 }
 
@@ -124,3 +125,4 @@
         }
 
     }  
+    
