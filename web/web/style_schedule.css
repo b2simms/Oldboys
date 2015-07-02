@@ -1,7 +1,3 @@
-* {
-    text-align: center;
-}
-
 body{
         text-align: center;
         background: #eee url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAMAAAC6sdbXAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF3d3d////riJKgAAAAAJ0Uk5T/wDltzBKAAAAFUlEQVR42mJgBAEGGMmAxAYCgAADAAGGABmnk/7aAAAAAElFTkSuQmCC);
@@ -13,57 +9,88 @@ img {
     max-width: 100%;
 }
 
-#page-wrap {
-  text-align: center; 
-}
-
-.oldboyslogo_image {
-    max-width: 100%;
-}
-
 .container {
     padding-left: 20vw;
     padding-right: 20vw;
 }
 
 .container > .uk-grid {
+    height: 80px;
     margin-left: 0px;
-}
+    padding: 0px;
 
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-color: #D3D3D3;
+
+}
 .container > .uk-grid > .uk-width-1-5, .uk-width-3-5 {
     padding-left: 0px;
     margin: auto;
 
 }
+.uk-width-3-5 > .uk-grid {
+    margin-left: 0px;
+}
+
+.uk-width-1-3 {
+    margin: auto;
+}
+
+.uk-width-1-3 > .scoreText {
+        font-size: 1.7em;
+    }
+
+.uk-width-1-3 .uk-grid  {
+    margin: auto;
+}
+.uk-width-1-3 .uk-grid .uk-width-1-3.day {
+    text-align: right;
+    padding-left: 0px;
+}
+.uk-width-1-3 .uk-grid .uk-width-2-3.date {
+    text-align: left;
+    padding-left: 5px;
+}
+
+
+@media screen and (max-width: 500px) {
+
+     .uk-width-1-3 > .locationText {
+        font-size: .8em;
+    } 
+    .uk-width-1-3 > .dayText {
+
+    }
+    .uk-width-1-3 > .dateText {
+        
+    }
+    .uk-width-1-3 > .scoreText {
+        font-size: 1.4em;
+    }
+    .uk-width-1-3 .uk-grid .uk-width-1-3.day {
+        text-align: center;
+        padding-left: 0px;
+        width: 100%;
+    }
+    .uk-width-1-3 .uk-grid .uk-width-2-3.date {
+        text-align: center;
+        padding-left: 2px;
+        width: 100%;
+    }
+}
+@media screen and (min-width: 800px) and (max-width: 900px){
+
+    .uk-width-1-3 .uk-grid .uk-width-1-3.day {
+        text-align: left;
+        padding-left: 0px;
+    }
+    .uk-width-1-3 .uk-grid .uk-width-2-3.date {
+        text-align: right;
+        padding-left: 2px;
+    }
+}
     
-
-.team1-image {
-    max-width: 100%;
-}
-
-.team2-image {
-    max-width: 100%;
-}
-
-.header-wrap {
-    width: 100%;
-    margin-left: -25px;
-}
-
-.menu-wrap {
-    width: 100%;
-    margin-left: -25px;
-    margin-top: 10px;
-}
-
-.uk-thumbnav {
-    margin-left: -25px;
-    margin-top: 5px;
-}
-
-.pic {}
-
-
 
     
 

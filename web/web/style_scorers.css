@@ -1,27 +1,18 @@
 * {
     box-sizing: border-box;
-    text-align: center;
 }
 body{
-    text-align: center;
-        background: #eee url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAMAAAC6sdbXAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF3d3d////riJKgAAAAAJ0Uk5T/wDltzBKAAAAFUlEQVR42mJgBAEGGMmAxAYCgAADAAGGABmnk/7aAAAAAElFTkSuQmCC);
-        font: 13px 'trebuchet MS', Arial, Helvetica;
-        font-size: 1.8vmin;
+    text-align: center; 
+    background: #eee url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAMAAAC6sdbXAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF3d3d////riJKgAAAAAJ0Uk5T/wDltzBKAAAAFUlEQVR42mJgBAEGGMmAxAYCgAADAAGGABmnk/7aAAAAAElFTkSuQmCC);
+    font: 13px 'trebuchet MS', Arial, Helvetica;
+    font-size: 1.8vmin;
     }
+
 img {
     max-width: 100%;
 }
 
 
-#page-wrap {
-  text-align: center; 
-}
-.team1-image {
-}
-
-.oldboyslogo_image {
-    max-width: 100%;
-}
 
 .container {
     padding-left: 20vw;
@@ -29,7 +20,21 @@ img {
 }
 
 .container > .uk-grid {
+    height: 80px;
     margin-left: 0px;
+    padding: 0px;
+
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-color: #D3D3D3;
+
+}
+.uk-grid .uk-grid {
+    margin-left: 0px;
+
+}
+.uk-grid .uk-grid > .uk-width-1-2 {
+    padding-left: 0px;
 }
 
 .container > .uk-grid > .uk-width-1-5, .uk-width-3-5 {
@@ -37,31 +42,29 @@ img {
     margin: auto;
 
 }
-    
-
-.team1-image {
-    max-width: 100%;
+.uk-width-1-5 > .goalsText {
+    font-size: 1.7em;
+    font-weight: bold;
+}
+.uk-width-1-2 > .locationText {
+    font-weight: bold;
 }
 
-.team2-image {
-    max-width: 100%;
+@media screen and (max-width: 500px) {
+
+    .uk-width-3-5 > .uk-grid > .uk-width-1-2 {
+        width: 100%;
+    }
+
+    .uk-width-1-2 > .locationText {
+
+        font-size: 1.2em;
+        font-style: bold;
+    } 
+
+    .uk-width-1-2 > .scoreText {
+        font-size: 1em;
+    }
 }
-
-.header-wrap {
-    margin-left: -25px;
-}
-
-.menu-wrap {
-    margin-left: -25px;
-    margin-top: 10px;
-}
-
-.uk-thumbnav {
-    margin-left: -25px;
-    margin-top: 5px;
-}
-
-.pic {}
-
 
 

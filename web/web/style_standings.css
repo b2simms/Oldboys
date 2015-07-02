@@ -1,26 +1,13 @@
 * {
     box-sizing: border-box;
-    text-align: center;
 }
 body{
-    text-align: center;
-        background: #eee url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAMAAAC6sdbXAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF3d3d////riJKgAAAAAJ0Uk5T/wDltzBKAAAAFUlEQVR42mJgBAEGGMmAxAYCgAADAAGGABmnk/7aAAAAAElFTkSuQmCC);
-        font: 13px 'trebuchet MS', Arial, Helvetica;
-        font-size: 1.8vmin;
+    background: #eee url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAMAAAC6sdbXAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF3d3d////riJKgAAAAAJ0Uk5T/wDltzBKAAAAFUlEQVR42mJgBAEGGMmAxAYCgAADAAGGABmnk/7aAAAAAElFTkSuQmCC);
+    font: 13px 'trebuchet MS', Arial, Helvetica;
+    font-size: 1.8vmin;
     }
 
 img {
-    max-width: 100%;
-}
-
-
-#page-wrap {
-  text-align: center; 
-}
-.team1-image {
-}
-
-.oldboyslogo_image {
     max-width: 100%;
 }
 
@@ -28,42 +15,33 @@ img {
     padding-left: 20vw;
     padding-right: 20vw;
 }
-
-.container > .uk-grid {
+.container > .uk-grid{
+    height: 80px;
     margin-left: 0px;
-}
+    padding: 0px;
 
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-color: #D3D3D3;
+}
 .container > .uk-grid > .uk-width-1-5, .uk-width-3-5 {
     padding-left: 0px;
     margin: auto;
-
 }
-    
-
-.team1-image {
-    max-width: 100%;
+.uk-width-1-5 .pointsText {
+    font-weight: bold;
+    font-size: 1.7em;
 }
-
-.team2-image {
-    max-width: 100%;
+.uk-width-3-5 .uk-grid {
+    margin-left: 0px;
 }
-
-.header-wrap {
-    margin-left: -25px;
+.uk-width-1-2 {
+    padding-left: 10%;
+    text-align: left;
 }
-
-.menu-wrap {
-    margin-left: -25px;
-    margin-top: 10px;
+.uk-width-1-5 {
+    text-align: center;
 }
-
-.uk-thumbnav {
-    margin-left: -25px;
-    margin-top: 5px;
-}
-
-.pic {}
-
 
 
 
