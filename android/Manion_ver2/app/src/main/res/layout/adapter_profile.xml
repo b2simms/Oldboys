@@ -1,0 +1,20 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:padding="2dip"
+    android:background="@drawable/row_onclick_color"
+    android:id="@+id/adapter_profile">
+
+    <TextView
+        android:id="@+id/profile_menu_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
+        android:textSize="17sp"
+        android:text="Player Name"
+        android:textColor="#000000"
+        android:singleLine="true"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

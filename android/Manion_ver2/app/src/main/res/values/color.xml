@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <resources>
+        <color name="ColorPrimary">#00AF99</color>
+        <color name="ColorPrimaryDark">#000</color>
+        <color name="rippleRowColor">#00AF99</color>
+    </resources>

@@ -57,9 +57,6 @@ public class Fragment_Edit_Schedule extends Fragment {
         passedValues[8] = bundle.getString("team2_score");
         passedValues[9] = bundle.getString("updated");
 
-        System.out.println("Passed values" + passedValues[0] + passedValues[1] + passedValues[2] + passedValues[3]
-                + passedValues[4] + passedValues[5] + passedValues[6] + passedValues[7] + passedValues[8] + passedValues[9]);
-
         return inflater.inflate(R.layout.fragment_edit_schedule, container, false);
     }
 

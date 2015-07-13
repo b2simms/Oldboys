@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="2dip"
+    android:id="@+id/adapter_profile"
+    android:background="@drawable/row_onclick_color"
+    android:weightSum="1"
+    android:stretchColumns="2">
+
+    <TableRow>
+        <TextView
+            android:id="@+id/left_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:textColor="#000000"
+            android:text="Team Name Here"
+            android:textSize="14sp"
+            android:layout_weight=".333"
+            android:gravity="right" />
+
+
+        <TextView
+            android:id="@+id/right_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:text="2adf asdfsaf0"
+            android:layout_weight=".666"
+            android:paddingLeft="14dp" />
+    </TableRow>
+
+</TableLayout>
