@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/White"
+        android:weightSum="1"
+        android:stretchColumns="4">
+
+        <TableRow
+            android:layout_height="40dp">
+            <TextView
+                android:id="@+id/header_col1_text"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:ellipsize="marquee"
+                android:textSize="16sp"
+                android:textColor="@color/SubmenuTitle"
+                android:textStyle="bold"
+                android:text="Benefit"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:background="@drawable/row_claim_tableheader_middle"/>
+            <TextView
+                android:id="@+id/header_col2_text"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:textSize="16sp"
+                android:textColor="@color/SubmenuTitle"
+                android:textStyle="bold"
+                android:text="Claimant"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:background="@drawable/row_claim_tableheader_middle"/>
+            <TextView
+                android:id="@+id/header_col3_text"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:textSize="16sp"
+                android:textColor="@color/SubmenuTitle"
+                android:textStyle="bold"
+                android:text="Coverage"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:background="@drawable/row_claim_tableheader_middle"/>
+            <TextView
+                android:id="@+id/header_col4_text"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:textSize="16sp"
+                android:textColor="@color/SubmenuTitle"
+                android:textStyle="bold"
+                android:text="Paid"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:background="@drawable/row_claim_tableheader_middle" />
+        </TableRow>
+
+    </TableLayout>
+    <ExpandableListView
+        android:id="@+id/expandableList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp">
+    </ExpandableListView>
+
+</LinearLayout>

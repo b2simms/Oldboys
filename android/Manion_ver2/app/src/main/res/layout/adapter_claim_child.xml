@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/claim_child_row"
+    android:background="@drawable/adapter_claim_background">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Claimant:"
+        android:id="@+id/pdf_info"
+        android:textSize="14dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginStart="80dp"
+        android:layout_alignTop="@+id/claim_name"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/BlackTint" />
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="afsfsafdasdfa a dfa sd asd f "
+        android:id="@+id/claim_name"
+        android:layout_toRightOf="@+id/textView48"
+        android:layout_toEndOf="@+id/textView48"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/BlackTint" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Service Date:"
+        android:id="@+id/textView48"
+        android:textSize="14dp"
+        android:layout_below="@+id/pdf_info"
+        android:layout_alignRight="@+id/pdf_info"
+        android:layout_alignEnd="@+id/pdf_info"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/BlackTint" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Spouse"
+        android:id="@+id/claim_date"
+        android:layout_alignTop="@+id/textView48"
+        android:layout_alignLeft="@+id/claim_name"
+        android:layout_alignStart="@+id/claim_name"
+        android:textColor="@color/BlackTint" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Coverage Code:"
+        android:id="@+id/textView50"
+        android:textSize="14dp"
+        android:layout_below="@+id/textView48"
+        android:layout_toLeftOf="@+id/claim_name"
+        android:layout_toStartOf="@+id/claim_name"
+        android:textColor="@color/BlackTint" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="dlkfja;slfdjlas klj ;laks fj; lasj"
+        android:id="@+id/claim_code"
+        android:layout_alignTop="@+id/textView50"
+        android:layout_alignLeft="@+id/claim_date"
+        android:layout_alignStart="@+id/claim_date"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/BlackTint" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Paid Amount:"
+        android:id="@+id/textView40"
+        android:textSize="14dp"
+        android:layout_below="@+id/textView50"
+        android:layout_alignRight="@+id/textView50"
+        android:layout_alignEnd="@+id/textView50"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/BlackTint" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="af a;lkj ;laj dfals "
+        android:id="@+id/claim_paid"
+        android:layout_alignTop="@+id/textView40"
+        android:layout_alignLeft="@+id/claim_code"
+        android:layout_alignStart="@+id/claim_code"
+        android:textColor="@color/BlackTint" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Received:"
+        android:id="@+id/textView21"
+        android:textSize="14dp"
+        android:layout_below="@+id/textView40"
+        android:layout_alignRight="@+id/textView40"
+        android:layout_alignEnd="@+id/textView40"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/BlackTint" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="af a;lkj ;laj dfals "
+        android:id="@+id/claim_received"
+        android:layout_below="@+id/textView40"
+        android:layout_alignLeft="@+id/claim_paid"
+        android:layout_alignStart="@+id/claim_paid"
+        android:textColor="@color/BlackTint" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Payment Information:"
+        android:id="@+id/textView22"
+        android:textSize="14dp"
+        android:layout_alignRight="@+id/textView21"
+        android:layout_alignEnd="@+id/textView21"
+        android:layout_below="@+id/textView21"
+        android:layout_alignLeft="@+id/textView50"
+        android:layout_alignStart="@+id/textView50"
+        android:textAlignment="gravity"
+        android:gravity="end|right"
+        android:textColor="@color/BlackTint" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="af a;lkj ;laj dfals "
+        android:id="@+id/claim_payInfo"
+        android:layout_alignBottom="@+id/textView22"
+        android:layout_alignLeft="@+id/claim_received"
+        android:layout_alignStart="@+id/claim_received"
+        android:textColor="@color/BlackTint" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:id="@+id/textView69"
+        android:layout_below="@+id/textView22"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

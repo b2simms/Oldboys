@@ -1,8 +1,9 @@
 <resources>
-    <string name="app_name">Manion_ver2</string>
+    <string name="app_name">Manion Wilkins</string>
 
     <string name="menu_option">Place submenu here -></string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Logout</string>
     <string name="openDrawer">Open navigation drawer</string>
     <string name="closeDrawer">Close navigation drawer</string>
+    <string name="welcome_text">We Care, You Benefit.</string>
 </resources>

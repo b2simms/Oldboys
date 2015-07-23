@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="600dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="600dp"
+    android:background="@color/White" >
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email:"
+        android:id="@+id/textView24"
+        android:textStyle="bold"
+        android:textColor="@color/FragmentTitle"
+        android:layout_above="@+id/textView29"
+        android:layout_alignLeft="@+id/textView31"
+        android:layout_alignStart="@+id/textView31"
+        android:textSize="14dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="kelly.scribner@gmail.com"
+        android:id="@+id/textView25"
+        android:layout_below="@+id/textView24"
+        android:layout_toRightOf="@+id/textView33"
+        android:layout_toEndOf="@+id/textView33"
+        android:paddingLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address:"
+        android:id="@+id/textView26"
+        android:textStyle="bold"
+        android:textColor="@color/FragmentTitle"
+        android:textSize="14dp"
+        android:layout_alignTop="@+id/textView30"
+        android:layout_alignLeft="@+id/textView32"
+        android:layout_alignStart="@+id/textView32"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="45 Huntington Ln"
+        android:id="@+id/textView27"
+        android:layout_below="@+id/textView26"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="St. Catherines, ON "
+        android:id="@+id/textView28"
+        android:layout_below="@+id/textView27"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="L2S 3R5"
+        android:id="@+id/textView29"
+        android:layout_below="@+id/textView28"
+        android:layout_alignRight="@+id/textView28"
+        android:layout_alignEnd="@+id/textView28"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone:"
+        android:id="@+id/textView30"
+        android:textStyle="bold"
+        android:textColor="@color/FragmentTitle"
+        android:textSize="14dp"
+        android:layout_below="@+id/relativeLayout4"
+        android:layout_alignLeft="@+id/textView25"
+        android:layout_alignStart="@+id/textView25"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(506)675-2525"
+        android:id="@+id/textView31"
+        android:layout_below="@+id/textView30"
+        android:layout_alignLeft="@+id/textView30"
+        android:layout_alignStart="@+id/textView30"
+        android:paddingLeft="10dp"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Banking:"
+        android:textColor="@color/FragmentTitle"
+        android:id="@+id/textView32"
+        android:layout_below="@+id/textView29"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="14dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="69042-837-0126074449"
+        android:id="@+id/textView33"
+        android:layout_below="@+id/textView32"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="867 Hepcoe Credit Union Ltd"
+        android:id="@+id/textView34"
+        android:layout_below="@+id/textView33"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This bank account information will be used for the following payments: "
+        android:id="@+id/textView35"
+        android:layout_below="@+id/textView34"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:textStyle="italic"
+        android:textSize="12dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignRight="@+id/textView25"
+        android:layout_alignEnd="@+id/textView25" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dental/Medical Claims"
+        android:id="@+id/textView36"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        android:layout_alignBottom="@+id/textView35"
+        android:layout_alignRight="@+id/textView34"
+        android:layout_alignEnd="@+id/textView34" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/row_header_middle"
+        android:id="@+id/relativeLayout4"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contact Information"
+            android:textColor="@color/FragmentTitle"
+            android:id="@+id/textView92"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/row_header_middle"
+        android:id="@+id/relativeLayout5"
+        android:layout_below="@+id/textView36"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Employer"
+            android:textColor="@color/FragmentTitle"
+            android:id="@+id/textView95"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Heritage Christian School"
+        android:id="@+id/textView94"
+        android:textStyle="bold"
+        android:textColor="@color/FragmentTitle"
+        android:textSize="14dp"
+        android:layout_below="@+id/relativeLayout5"
+        android:layout_alignLeft="@+id/textView32"
+        android:layout_alignStart="@+id/textView32"
+        android:layout_marginBottom="35dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WindSwept Hair and Spa"
+        android:id="@+id/textView96"
+        android:textStyle="bold"
+        android:textColor="@color/FragmentTitle"
+        android:textSize="14dp"
+        android:layout_below="@+id/textView94"
+        android:layout_alignLeft="@+id/textView94"
+        android:layout_alignStart="@+id/textView94"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Income: "
+        android:id="@+id/textView97"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/relativeLayout5"
+        android:layout_alignLeft="@+id/textView94"
+        android:layout_alignStart="@+id/textView94"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Income: "
+        android:id="@+id/textView98"
+        android:layout_below="@+id/textView96"
+        android:layout_alignLeft="@+id/textView96"
+        android:layout_alignStart="@+id/textView96"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="37006.50 Gross Earnings Yearly"
+        android:id="@+id/textView99"
+        android:layout_alignBaseline="@+id/textView97"
+        android:layout_alignBottom="@+id/textView97"
+        android:layout_toRightOf="@+id/textView97"
+        android:layout_toEndOf="@+id/textView97"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12290.00 Gross Earnings Yearly"
+        android:id="@+id/textView100"
+        android:layout_alignTop="@+id/textView98"
+        android:layout_toRightOf="@+id/textView98"
+        android:layout_toEndOf="@+id/textView98"
+        android:layout_marginLeft="10dp" />
+
+</RelativeLayout>
+    </ScrollView>

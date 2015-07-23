@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="178dp"
+    android:background="@drawable/polybackground"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/White"
+            android:text="Manion Wilkins and Associates Ltd"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_alignTop="@+id/circleView"
+            android:layout_toRightOf="@+id/circleView"
+            android:layout_toEndOf="@+id/circleView"
+            android:layout_alignBottom="@+id/circleView"
+            android:gravity="center_vertical|center_horizontal" />
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/manion_image"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="38dp"
+            android:id="@+id/circleView"
+            />
+
+
+
+</RelativeLayout>

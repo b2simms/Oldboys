@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White">
+
+    <ImageView
+        android:id="@+id/welcome1_image"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/manion_welcome1"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Welcome to the Manion Wilkins and Associates Mobile Application for Android"
+        android:id="@+id/textView"
+        android:textColor="@color/FragmentTitle"
+        android:gravity="center"
+        android:layout_below="@+id/welcome1_image"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/White"
+        android:autoText="true"
+        android:layout_above="@+id/welcome2_image"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+
+    <ImageView
+        android:id="@+id/welcome2_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/manion_welcome2"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="We Care,"
+        android:id="@+id/textView2"
+        android:layout_marginTop="61dp"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textColor="@color/FragmentTitle"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/textView9"
+        android:layout_alignStart="@+id/textView9"
+        android:layout_marginLeft="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You Benefit."
+        android:id="@+id/textView9"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="22dp"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textColor="@color/FragmentTitle"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

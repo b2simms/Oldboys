@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/White"
+    android:layout_weight="1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relativeLayout3"
+        android:layout_alignLeft="@+id/relativeLayout3"
+        android:layout_alignStart="@+id/relativeLayout3"
+        android:layout_alignRight="@+id/relativeLayout3"
+        android:layout_alignEnd="@+id/relativeLayout3"
+        android:background="@color/ClaimRow"
+        android:id="@+id/innerGrayBox"
+        android:layout_alignBottom="@+id/textView67"></RelativeLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Carrier:"
+        android:id="@+id/pdf_info"
+        android:textSize="14dp"
+        android:textStyle="italic"
+        android:layout_marginLeft="70dp"
+        android:layout_below="@+id/relativeLayout3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/BlackTint" />
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="afsfsafdasdfa a dfa sd asd f "
+        android:id="@+id/benefit_carrier"
+        android:layout_below="@+id/relativeLayout3"
+        android:layout_toRightOf="@+id/textView48"
+        android:layout_toEndOf="@+id/textView48"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/BlackTint" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Policy Number:"
+        android:id="@+id/textView48"
+        android:textSize="14dp"
+        android:textStyle="italic"
+        android:layout_below="@+id/pdf_info"
+        android:layout_alignRight="@+id/pdf_info"
+        android:layout_alignEnd="@+id/pdf_info"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/BlackTint" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Spouse"
+        android:id="@+id/claim_date"
+        android:layout_alignTop="@+id/textView48"
+        android:layout_alignLeft="@+id/benefit_carrier"
+        android:layout_alignStart="@+id/benefit_carrier"
+        android:textColor="@color/BlackTint" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Effective Date:"
+        android:id="@+id/textView50"
+        android:textSize="14dp"
+        android:textStyle="italic"
+        android:layout_below="@+id/textView48"
+        android:layout_toLeftOf="@+id/benefit_carrier"
+        android:layout_toStartOf="@+id/benefit_carrier"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/BlackTint" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="dlkfja;slfdjlas klj ;laks fj; lasj"
+        android:id="@+id/claim_code"
+        android:layout_below="@+id/claim_date"
+        android:layout_alignLeft="@+id/benefit_carrier"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/BlackTint" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Coverage:"
+        android:id="@+id/textView40"
+        android:textSize="14dp"
+        android:textStyle="italic"
+        android:layout_below="@+id/textView50"
+        android:layout_alignRight="@+id/textView50"
+        android:layout_alignEnd="@+id/textView50"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/BlackTint" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="af a;lkj ;laj dfals "
+        android:id="@+id/benefit_coverage"
+        android:layout_alignTop="@+id/textView40"
+        android:layout_alignLeft="@+id/claim_code"
+        android:layout_alignStart="@+id/claim_code"
+        android:textColor="@color/BlackTint" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/SubHeader"
+        android:id="@+id/relativeLayout3"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Benefit:"
+            android:textColor="@color/FragmentTitle"
+            android:id="@+id/text37"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Life"
+            android:id="@+id/benefit_name"
+            android:textStyle="bold|italic"
+            android:textColor="@color/FragmentTitle"
+            android:layout_alignBottom="@+id/text37"
+            android:layout_toRightOf="@+id/text37"
+            android:layout_toEndOf="@+id/text37"
+            android:layout_marginLeft="10dp" />
+
+    </RelativeLayout>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:id="@+id/textView67"
+        android:layout_below="@+id/benefit_coverage"
+        android:layout_alignRight="@+id/benefit_carrier"
+        android:layout_alignEnd="@+id/benefit_carrier"
+        android:layout_alignLeft="@+id/innerGrayBox"
+        android:layout_alignStart="@+id/innerGrayBox" />
+
+</RelativeLayout>

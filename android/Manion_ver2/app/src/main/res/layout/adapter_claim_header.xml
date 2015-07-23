@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="2dip"
+    android:id="@+id/adapter_profile"
+    android:background="@drawable/row_claim_header"
+    android:onClick="doNothing"
+    android:weightSum="1"
+    android:stretchColumns="1">
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/header_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:textColor="@color/FragmentTitle"
+            android:text="Effective Date"
+            android:textSize="14sp"
+            android:background="@drawable/row_claim_header"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:paddingLeft="10dp" />
+    </TableRow>
+
+
+</TableLayout>

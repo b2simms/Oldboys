@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/popupwindow_onclick_color"
+        android:id="@+id/pdf_doc1">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:id="@+id/imageView"
+            android:src="@drawable/icon_pdf"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Employee Booklet"
+            android:id="@+id/textView70"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imageView"
+            android:layout_toEndOf="@+id/imageView"
+            android:layout_marginTop="5dp"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/FragmentTitle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="This booklet contains general information about your group insurance contract. This document does not include all contractual clauses regarding definitions, eligibility, enrolment, termination of insurance and other specifications. You may access this information by consulting the contract available from your employer. "
+            android:id="@+id/textView71"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:singleLine="false"
+            android:layout_below="@+id/textView70"
+            android:layout_toRightOf="@+id/imageView"
+            android:layout_alignRight="@+id/textView73"
+            android:layout_alignEnd="@+id/textView73"
+            android:textSize="12dp"
+            android:layout_above="@+id/textView72"
+            android:layout_marginBottom="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Size: 780 KB"
+            android:id="@+id/textView72"
+            android:textSize="10sp"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/imageView"
+            android:layout_toEndOf="@+id/imageView"
+            android:layout_marginBottom="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Updated: 14 Aug 2014"
+            android:id="@+id/textView73"
+            android:textSize="10sp"
+            android:layout_below="@+id/textView71"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:id="@+id/textView74"
+        android:background="@color/Black"
+        android:layout_below="@+id/pdf_doc1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/popupwindow_onclick_color"
+        android:id="@+id/pdf_doc2"
+        android:layout_below="@+id/textView74"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:id="@+id/imageView2"
+            android:src="@drawable/icon_pdf"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Out of Country"
+            android:id="@+id/textView75"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imageView2"
+            android:layout_toEndOf="@+id/imageView2"
+            android:layout_marginTop="5dp"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/FragmentTitle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="This Plan provides extensive coverage for many services rendered outside of the your province of residence. It is important to note that such expenses are covered provided that they are unexpected and of an emergency nature. The Plan does not provide benefits&quot;+                         &quot; for medical treatment if the purpose of your tirp outside of your province of residence is to obtain medical treatment."
+            android:id="@+id/textView76"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:singleLine="false"
+            android:layout_below="@+id/textView75"
+            android:layout_toRightOf="@+id/imageView2"
+            android:layout_alignRight="@+id/textView78"
+            android:layout_alignEnd="@+id/textView78"
+            android:textSize="12dp"
+            android:layout_above="@+id/textView77"
+            android:layout_marginBottom="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Size: 780KB"
+            android:id="@+id/textView77"
+            android:textSize="10sp"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/imageView2"
+            android:layout_toEndOf="@+id/imageView2"
+            android:layout_marginBottom="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Updated: 03 May 2014"
+            android:id="@+id/textView78"
+            android:textSize="10sp"
+            android:layout_below="@+id/textView76"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:id="@+id/textView75"
+        android:background="@color/Black"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/pdf_doc2"
+        android:layout_alignParentLeft="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/popupwindow_onclick_color"
+        android:id="@+id/pdf_doc3"
+        android:layout_below="@+id/textView75"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:id="@+id/imageView3"
+            android:src="@drawable/icon_pdf"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Health Claim Form"
+            android:id="@+id/textView79"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imageView3"
+            android:layout_toEndOf="@+id/imageView3"
+            android:layout_marginTop="5dp"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/FragmentTitle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Health claim form - Submit"
+            android:id="@+id/textView80"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:singleLine="false"
+            android:layout_below="@+id/textView79"
+            android:layout_toRightOf="@+id/imageView3"
+            android:layout_alignRight="@+id/textView82"
+            android:layout_alignEnd="@+id/textView82"
+            android:textSize="12dp"
+            android:layout_above="@+id/textView81"
+            android:layout_marginBottom="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Size: 32.3 KB"
+            android:id="@+id/textView81"
+            android:textSize="10sp"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/imageView3"
+            android:layout_toEndOf="@+id/imageView3"
+            android:layout_marginBottom="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Updated: 11 Jun 2014"
+            android:id="@+id/textView82"
+            android:textSize="10sp"
+            android:layout_below="@+id/textView80"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:id="@+id/textView79"
+        android:background="@color/Black"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/pdf_doc3"
+        android:layout_alignParentLeft="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/popupwindow_onclick_color"
+        android:id="@+id/pdf_doc4"
+        android:layout_below="@+id/textView79"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:id="@+id/imageView4"
+            android:src="@drawable/icon_pdf"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dental Claim Form"
+            android:id="@+id/textView83"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imageView4"
+            android:layout_toEndOf="@+id/imageView4"
+            android:layout_marginTop="5dp"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/FragmentTitle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dental claim form - Submit"
+            android:id="@+id/textView84"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:singleLine="false"
+            android:layout_below="@+id/textView83"
+            android:layout_toRightOf="@+id/imageView4"
+            android:layout_alignRight="@+id/textView86"
+            android:layout_alignEnd="@+id/textView86"
+            android:textSize="12dp"
+            android:layout_above="@+id/textView85"
+            android:layout_marginBottom="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Size: 75.9 KB"
+            android:id="@+id/textView85"
+            android:textSize="10sp"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/imageView4"
+            android:layout_toEndOf="@+id/imageView4"
+            android:layout_marginBottom="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Updated: 18 Oct 2013"
+            android:id="@+id/textView86"
+            android:textSize="10sp"
+            android:layout_below="@+id/textView84"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:id="@+id/textView83"
+        android:background="@color/Black"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/pdf_doc4"
+        android:layout_alignParentLeft="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/popupwindow_onclick_color"
+        android:id="@+id/pdf_doc5"
+        android:layout_below="@+id/textView83"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:id="@+id/imageView5"
+            android:src="@drawable/icon_pdf"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Terms and Conditions"
+            android:id="@+id/textView87"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imageView5"
+            android:layout_toEndOf="@+id/imageView5"
+            android:layout_marginTop="5dp"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/FragmentTitle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Terms and Conditions regarding Heritage Christian School policies and benefits that fall under any Class - A coverage."
+            android:id="@+id/textView88"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:singleLine="false"
+            android:layout_below="@+id/textView87"
+            android:layout_toRightOf="@+id/imageView5"
+            android:layout_alignRight="@+id/textView90"
+            android:layout_alignEnd="@+id/textView90"
+            android:textSize="12dp"
+            android:layout_above="@+id/textView89"
+            android:layout_marginBottom="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Size: 169 KB"
+            android:id="@+id/textView89"
+            android:textSize="10sp"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/imageView5"
+            android:layout_toEndOf="@+id/imageView5"
+            android:layout_marginBottom="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Updated: 30 July 2014"
+            android:id="@+id/textView90"
+            android:textSize="10sp"
+            android:layout_below="@+id/textView88"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:id="@+id/textView87"
+        android:background="@color/Black"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/pdf_doc5"
+        android:layout_alignParentLeft="true" />
+
+</RelativeLayout>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/benefit_listview_header"
+    android:background="#ffffff">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/row_header_middle"
+        android:id="@+id/relativeLayout3"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Class"
+            android:textColor="@color/FragmentTitle"
+            android:id="@+id/text37"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Plan:"
+        android:id="@+id/text38"
+        android:textSize="14dp"
+        android:layout_below="@+id/relativeLayout3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="34dp"
+        android:textStyle="bold"
+        android:textColor="@color/FragmentTitle"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Division:"
+        android:id="@+id/textView13"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        android:textColor="@color/FragmentTitle"
+        android:layout_below="@+id/text38"
+        android:layout_alignLeft="@+id/text38"
+        android:layout_alignStart="@+id/text38"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="0dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Class:"
+        android:id="@+id/textView18"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        android:textColor="@color/FragmentTitle"
+        android:layout_below="@+id/textView13"
+        android:layout_alignLeft="@+id/textView13"
+        android:layout_alignStart="@+id/textView13"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="0dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Coverage Effective Date:"
+        android:id="@+id/textView59"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        android:textColor="@color/FragmentTitle"
+        android:layout_below="@+id/textView18"
+        android:layout_alignLeft="@+id/textView18"
+        android:layout_alignStart="@+id/textView18"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="0dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Coverage Status:"
+        android:id="@+id/textView60"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        android:textColor="@color/FragmentTitle"
+        android:layout_below="@+id/textView59"
+        android:layout_alignLeft="@+id/textView59"
+        android:layout_alignStart="@+id/textView59"
+        android:layout_marginLeft="0dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Heritage Christian School"
+        android:id="@+id/textView61"
+        android:layout_alignTop="@+id/text38"
+        android:layout_toRightOf="@+id/text38"
+        android:layout_toEndOf="@+id/text38"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Heritage Christian School"
+        android:id="@+id/textView62"
+        android:layout_below="@+id/text38"
+        android:layout_toRightOf="@+id/textView13"
+        android:layout_toEndOf="@+id/textView13"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Heritage Christian School"
+        android:id="@+id/textView63"
+        android:layout_below="@+id/textView13"
+        android:layout_toRightOf="@+id/textView18"
+        android:layout_toEndOf="@+id/textView18"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Active In Benefit"
+        android:id="@+id/textView65"
+        android:layout_below="@+id/textView59"
+        android:layout_toRightOf="@+id/textView60"
+        android:layout_toEndOf="@+id/textView60"
+        android:layout_marginLeft="10dp"
+        android:textIsSelectable="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="16 Aug 2014"
+        android:id="@+id/textView64"
+        android:layout_alignTop="@+id/textView59"
+        android:layout_toRightOf="@+id/textView59"
+        android:layout_toEndOf="@+id/textView59"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:id="@+id/textView68"
+        android:layout_below="@+id/textView60"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

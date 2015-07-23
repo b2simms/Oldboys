@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <resources>
-        <color name="ColorPrimary">#00AF99</color>
-        <color name="ColorPrimaryDark">#000</color>
-        <color name="rippleRowColor">#00AF99</color>
-    </resources>
+<resources>
+    <color name="ColorPrimary">#4DB6AC</color>
+    <color name="ColorSecondary">#552988</color>
+    <color name="SubmenuTitle">#672622</color>
+    <color name="FragmentTitle">#552988</color>
+    <color name="Black">#000</color>
+    <color name="White">#ffffff</color>
+    <color name="OnClick">#4DB6AC</color>
+    <color name="Button">#71c5bd</color>
+    <color name="Header">#b5b5b5</color>
+    <color name="SubHeader">#ecefec</color>
+    <color name="ClaimRow">#fbfbfb</color>
+    <color name="HighlightText">#00FF7F</color>
+    <color name="BlackTint">#505050</color>
+
+</resources>

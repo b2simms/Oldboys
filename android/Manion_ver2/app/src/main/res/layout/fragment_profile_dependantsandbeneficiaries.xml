@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/benefit_listview_header"
+    android:background="#ffffff">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/row_header_middle"
+        android:id="@+id/relativeLayout3"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dependants"
+            android:textColor="@color/FragmentTitle"
+            android:id="@+id/text37"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="John Muir"
+        android:id="@+id/text38"
+        android:textSize="14dp"
+        android:layout_below="@+id/relativeLayout3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="34dp"
+        android:textStyle="bold"
+        android:textColor="@color/FragmentTitle"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Relationship:"
+        android:id="@+id/textView61"
+        android:layout_below="@+id/text38"
+        android:layout_alignLeft="@+id/textView101"
+        android:layout_alignStart="@+id/textView101" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:id="@+id/textView68"
+        android:layout_below="@+id/textView101"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/row_header_middle"
+        android:id="@+id/relativeLayout6"
+        android:layout_below="@+id/textView68"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Life Insurance Beneficiaries"
+            android:textColor="@color/FragmentTitle"
+            android:id="@+id/textView39"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Spouse"
+        android:id="@+id/textView42"
+        android:layout_alignBottom="@+id/textView61"
+        android:layout_toRightOf="@+id/textView61"
+        android:layout_toEndOf="@+id/textView61"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Janelle Muir"
+        android:id="@+id/textView45"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        android:textColor="@color/FragmentTitle"
+        android:layout_below="@+id/textView61"
+        android:layout_alignLeft="@+id/text38"
+        android:layout_alignStart="@+id/text38"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Relationship:"
+        android:id="@+id/textView101"
+        android:layout_below="@+id/textView45"
+        android:layout_alignLeft="@+id/textView45"
+        android:layout_alignStart="@+id/textView45"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Child"
+        android:id="@+id/textView102"
+        android:layout_alignTop="@+id/textView101"
+        android:layout_toRightOf="@+id/textView101"
+        android:layout_toEndOf="@+id/textView101"
+        android:layout_marginLeft="10dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/SubHeader"
+        android:id="@+id/relativeLayout7"
+        android:layout_below="@+id/relativeLayout6"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Benefit:"
+            android:textColor="@color/FragmentTitle"
+            android:id="@+id/textView103"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Life"
+            android:id="@+id/textView104"
+            android:textStyle="bold|italic"
+            android:textColor="@color/FragmentTitle"
+            android:layout_alignBottom="@+id/textView103"
+            android:layout_toRightOf="@+id/textView103"
+            android:layout_toEndOf="@+id/textView103"
+            android:layout_marginLeft="10dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Beneficiary:"
+        android:id="@+id/textView105"
+        android:textSize="15dp"
+        android:layout_below="@+id/relativeLayout7"
+        android:layout_alignRight="@+id/textView107"
+        android:layout_alignEnd="@+id/textView107" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="John Muir"
+        android:id="@+id/textView106"
+        android:layout_alignTop="@+id/textView105"
+        android:layout_alignLeft="@+id/textView102"
+        android:layout_alignStart="@+id/textView102" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Relationship:"
+        android:id="@+id/textView107"
+        android:textSize="15dp"
+        android:layout_below="@+id/textView105"
+        android:layout_alignRight="@+id/textView101"
+        android:layout_alignEnd="@+id/textView101"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Spouse"
+        android:id="@+id/textView108"
+        android:layout_alignTop="@+id/textView107"
+        android:layout_toRightOf="@+id/textView107"
+        android:layout_toEndOf="@+id/textView107"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Percentage:"
+        android:id="@+id/textView109"
+        android:textSize="15dp"
+        android:layout_below="@+id/textView107"
+        android:layout_alignRight="@+id/textView107"
+        android:layout_alignEnd="@+id/textView107"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100.0"
+        android:id="@+id/textView110"
+        android:layout_alignBottom="@+id/textView109"
+        android:layout_toRightOf="@+id/textView109"
+        android:layout_toEndOf="@+id/textView109"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:id="@+id/textView11"
+        android:layout_below="@+id/textView110"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
+</ScrollView>

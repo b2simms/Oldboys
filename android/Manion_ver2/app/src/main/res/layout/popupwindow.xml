@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/popupwindow_roundedcorner"
+    android:id="@+id/popupwindow_layout">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/FragmentTitle"
+        android:text="PDF Name"
+        android:id="@+id/pdf_name"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textIsSelectable="false" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="PDF INFO"
+        android:id="@+id/pdf_info"
+        android:layout_below="@+id/pdf_name"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="10dp"
+        android:textStyle="italic"
+        android:layout_marginRight="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Size: "
+        android:id="@+id/textView37"
+        android:textSize="12dp"
+        android:layout_below="@+id/pdf_info"
+        android:layout_alignLeft="@+id/pdf_info"
+        android:layout_alignStart="@+id/pdf_info" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Size in KB"
+        android:id="@+id/pdf_size"
+        android:layout_marginLeft="5dp"
+        android:textSize="12dp"
+        android:layout_below="@+id/pdf_info"
+        android:layout_toRightOf="@+id/textView37"
+        android:layout_toEndOf="@+id/textView37"
+        android:layout_marginStart="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date Updated:"
+        android:id="@+id/textView91"
+        android:textSize="12dp"
+        android:layout_below="@+id/pdf_info"
+        android:layout_toLeftOf="@+id/pdf_date"
+        android:layout_toStartOf="@+id/pdf_date" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="11 Aug 2014"
+        android:id="@+id/pdf_date"
+        android:textSize="12dp"
+        android:layout_alignTop="@+id/textView91"
+        android:layout_alignRight="@+id/pdf_info"
+        android:layout_alignEnd="@+id/pdf_info"
+        android:layout_marginLeft="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="10dp"
+        android:id="@+id/textView93"
+        android:layout_below="@+id/pdf_size"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/pdf_date"
+        android:layout_alignEnd="@+id/pdf_date"
+        android:layout_marginBottom="40dp" />
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="45dp"
+        android:text="Open"
+        android:id="@+id/pdf_open"
+        android:textColor="@color/SubmenuTitle"
+        android:background="@drawable/popupwindow_button"
+        android:layout_below="@+id/textView37"
+        android:layout_alignLeft="@+id/textView37"
+        android:layout_alignStart="@+id/textView37"
+        android:layout_marginTop="10dp" />
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="45dp"
+        android:text="Cancel"
+        android:id="@+id/pdf_cancel"
+        android:textColor="@color/SubmenuTitle"
+        android:background="@drawable/popupwindow_button"
+        android:layout_alignTop="@+id/pdf_open"
+        android:layout_alignRight="@+id/textView93"
+        android:layout_alignEnd="@+id/textView93" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:id="@+id/textView38"
+
+        android:layout_below="@+id/pdf_open"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
+    </ScrollView>

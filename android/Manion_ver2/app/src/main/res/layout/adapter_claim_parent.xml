@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="30dp"
+    android:padding="2dip"
+    android:id="@+id/adapter_table_claim"
+    android:weightSum="1"
+    android:stretchColumns="1">
+
+    <TableRow>
+        <TextView
+            android:id="@+id/col1_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:textColor="@color/Black"
+            android:text="Benefit"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            />
+        <TextView
+            android:id="@+id/col2_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:textColor="@color/Black"
+            android:text="Effective Date"
+            android:textSize="14sp"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            />
+        <TextView
+            android:id="@+id/col3_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:textColor="@color/Black"
+            android:text="Coverage"
+            android:textSize="14sp"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            />
+        <TextView
+            android:id="@+id/col4_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:textColor="@color/Black"
+            android:text="Coverage"
+            android:textSize="14sp"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            />
+
+    </TableRow>
+
+</TableLayout>

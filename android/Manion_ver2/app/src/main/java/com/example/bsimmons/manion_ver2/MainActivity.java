@@ -1,5 +1,6 @@
 package com.example.bsimmons.manion_ver2;
 
+import android.content.res.Configuration;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
@@ -10,79 +11,80 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.GestureDetector;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import java.util.ArrayList;
 
 
 public class MainActivity extends ActionBarActivity {
 
-    //First We Declare Titles And Icons For Our Navigation Drawer List View
-    //This Icons And Titles Are holded in an Array as you can see
+    private final String PROFILE = "Profile";
+    private final String CLAIMS_HISTORY = "Claims History";
+    private final String BENEFIT_COVERAGE = "Benefit Coverage";
+    private final String DOCUMENTS = "Documents";
+    private final String WELCOME = "Welcome";
 
-    String TITLES[] = {"Profile","Claims History","Benefit Coverage","Update Info","Documents"};
-    ArrayList<String> SUBMENU = new ArrayList();
-    int ICONS[] = {R.drawable.icon_accountoutline,
+    //SUBMENUS
+    String[] submenu_profile = {"Overview","Contact/Employer","Dependents/Beneficiaries"};
+    //String[] submenu_claimshistory = {"My Claim History"};
+    //String[] submenu_benefitcoverage = {"Class","Available Benefits","Waived Benefits"};
+
+    private final int ICONS[] = {R.drawable.icon_accountoutline,
             R.drawable.icon_wordpress,
-            R.drawable.icon_xboxcontroller,
-            R.drawable.icon_calendarcheck,
+            R.drawable.icon_xbox,
             R.drawable.icon_library};
 
-    Button button1;
-    PopupMenu popup;
+    private Button submenu_button;
+    private PopupMenu popup;
+    private String tag = "";
 
-    //Similarly we Create a String Resource for the name and email in the header view
-    //And we also create a int resource for profile picture in the header view
+    private final String NAME = "Manion Wilkins & Associates Ltd";
+    private final int HEADER_IMAGE = R.drawable.manion_image;
 
-    String NAME = "Manion Wilkins & Associates Ltd";
-    int PROFILE = R.drawable.manion_image;
+    private Toolbar toolbar;
 
-    private Toolbar toolbar;                              // Declaring the Toolbar Object
+    private RecyclerView mRecyclerView;
+    private RecyclerView.Adapter mAdapter;
+    private RecyclerView.LayoutManager mLayoutManager;
+    private DrawerLayout Drawer;
 
-    RecyclerView mRecyclerView;                           // Declaring RecyclerView
-    RecyclerView.Adapter mAdapter;                        // Declaring Adapter For Recycler View
-    RecyclerView.LayoutManager mLayoutManager;            // Declaring Layout Manager as a linear layout manager
-    DrawerLayout Drawer;                                  // Declaring DrawerLayout
-
-    ActionBarDrawerToggle mDrawerToggle;                  // Declaring Action Bar Drawer Toggle
-
-
-
+    private ActionBarDrawerToggle mDrawerToggle;
+    private RelativeLayout submenu_bar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-    /* Assinging the toolbar object ot the view
-    and setting the the Action bar to our toolbar
-     */
         toolbar = (Toolbar) findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
 
+        mRecyclerView = (RecyclerView) findViewById(R.id.RecyclerView);
 
+        mRecyclerView.setHasFixedSize(true);
 
+        mAdapter = new Adapter_MainMenu(new String[]{PROFILE,CLAIMS_HISTORY,BENEFIT_COVERAGE,DOCUMENTS},ICONS,NAME,HEADER_IMAGE,this);
 
-        mRecyclerView = (RecyclerView) findViewById(R.id.RecyclerView); // Assigning the RecyclerView Object to the xml View
-
-        mRecyclerView.setHasFixedSize(true);                            // Letting the system know that the list objects are of fixed size
-
-        mAdapter = new MyAdapter(TITLES,ICONS,NAME,PROFILE,this);       // Creating the Adapter of MyAdapter class(which we are going to see in a bit)
-        // And passing the titles,icons,header view name, header view email,
-        // and header view profile picture
-
-        mRecyclerView.setAdapter(mAdapter);                              // Setting the adapter to RecyclerView
+        mRecyclerView.setAdapter(mAdapter);
 
         final GestureDetector mGestureDetector = new GestureDetector(MainActivity.this, new GestureDetector.SimpleOnGestureListener() {
 
             @Override public boolean onSingleTapUp(MotionEvent e) {
+                return true;
+            }
+            @Override public boolean onDoubleTap(MotionEvent e){
+                return true;
+            }
+            @Override public boolean onDoubleTapEvent(MotionEvent e){
+                return true;
+            }
+            @Override public boolean onSingleTapConfirmed(MotionEvent e){
                 return true;
             }
 
@@ -97,58 +99,63 @@ public class MainActivity extends ActionBarActivity {
 
                 if (child != null && mGestureDetector.onTouchEvent(motionEvent)) {
                     Drawer.closeDrawers();
-                    Toast.makeText(MainActivity.this, "The Item Clicked is: " + recyclerView.getChildAdapterPosition(child), Toast.LENGTH_SHORT).show();
 
                     // update the main content by replacing fragments
                     FragmentManager fragmentManager = getSupportFragmentManager();
 
-
-
                     Fragment objFrag = null;
-                    objFrag = new fragment_profile();
 
-                    String tag = "";
+                    submenu_bar = (RelativeLayout) findViewById(R.id.submenu_bar);
+                    submenu_bar.setVisibility(View.VISIBLE);
 
                     TextView title = (TextView) findViewById(R.id.nav_bar_title);
 
                     switch (recyclerView.getChildAdapterPosition(child)) {
                         case 1:
-                            tag = "Profile";
+                            tag = PROFILE;
                             title.setText(tag);
-                            objFrag = new fragment_profile();
-                            fragmentManager.beginTransaction()
-                                    .replace(R.id.container, objFrag, tag)
-                                    .commit();
-                            break;
-                        case 2:
-                            tag = "Claims History";
-                            objFrag = new fragment_claimsHistory();
+                            setSubmenuOptions(submenu_profile);
+                            setSubmenuTitle(submenu_profile[0]);
+                            submenu_bar.setVisibility(View.VISIBLE);
+                            objFrag = new Fragment_Profile_Overview();
 
                             fragmentManager.beginTransaction()
                                     .replace(R.id.container, objFrag, tag)
+                                    .addToBackStack(tag)
+                                    .commit();
+                            break;
+                        case 2:
+                            tag = CLAIMS_HISTORY;
+                            title.setText(tag);
+                            submenu_bar.setVisibility(View.GONE);
+                            objFrag = new Fragment_ClaimHistory();
+
+                            fragmentManager.beginTransaction()
+                                    .replace(R.id.container, objFrag, tag)
+                                    .addToBackStack(tag)
                                     .commit();
                             break;
                         case 3:
-                            tag = "Benefit Coverage";
+                            tag = BENEFIT_COVERAGE;
+                            title.setText(tag);
+                            submenu_bar.setVisibility(View.GONE);
                             objFrag = new Fragment_BenefitCoverage();
 
                             fragmentManager.beginTransaction()
                                     .replace(R.id.container, objFrag, tag)
+                                    .addToBackStack(tag)
                                     .commit();
                             break;
                         case 4:
-                            tag = "Submit Claim";
-                            objFrag = new fragment_submitClaim();
-
+                            submenu_bar.setVisibility(View.GONE);
+                            title.setText(DOCUMENTS);
                             fragmentManager.beginTransaction()
-                                    .replace(R.id.container, objFrag, tag)
+                                    .replace(R.id.container, new Fragment_Documents(), DOCUMENTS)
+                                    .addToBackStack(tag)
                                     .commit();
                             break;
-                        case 5:
+                        default:
                             break;
-                        case 6:
-                            break;
-                        default: break;
                     }
                     return false;
                 }
@@ -162,142 +169,242 @@ public class MainActivity extends ActionBarActivity {
             }
 
 
-            public void onRequestDisallowInterceptTouchEvent(boolean b){
+            public void onRequestDisallowInterceptTouchEvent(boolean b) {
 
             }
         });
 
 
-        mLayoutManager = new LinearLayoutManager(this);                 // Creating a layout Manager
-
-        mRecyclerView.setLayoutManager(mLayoutManager);                 // Setting the layout Manager
-
-
-        Drawer = (DrawerLayout) findViewById(R.id.DrawerLayout);        // Drawer object Assigned to the view
+        mLayoutManager = new LinearLayoutManager(this);
+        mRecyclerView.setLayoutManager(mLayoutManager);
+        Drawer = (DrawerLayout) findViewById(R.id.DrawerLayout);
         mDrawerToggle = new ActionBarDrawerToggle(this,Drawer,toolbar,R.string.openDrawer,R.string.closeDrawer){
 
             @Override
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
-                // code here will execute once the drawer is opened( As I dont want anything happened whe drawer is
-                // open I am not going to put anything here)
             }
 
             @Override
             public void onDrawerClosed(View drawerView) {
                 super.onDrawerClosed(drawerView);
-                // Code here will execute once drawer is closed
             }
 
-        }; // Drawer Toggle Object Made
-        Drawer.setDrawerListener(mDrawerToggle); // Drawer Listener set to the Drawer toggle
-        mDrawerToggle.syncState();               // Finally we set the drawer toggle sync State
+        };
+        Drawer.setDrawerListener(mDrawerToggle);
+        mDrawerToggle.syncState();
 
         setSubmenuButton();
 
+        submenu_bar = (RelativeLayout) findViewById(R.id.submenu_bar);
+        submenu_bar.setVisibility(View.GONE);
+        submenu_bar.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                submenu_button.performClick();
+            }
+        });
+
+        FragmentManager fmanager = getSupportFragmentManager();
+        fmanager.beginTransaction()
+                .replace(R.id.container,new Fragment_Welcome(), tag)
+                .commit();
+
+        TextView title = (TextView) findViewById(R.id.nav_bar_title);
+        title.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Drawer.openDrawer(findViewById(R.id.RecyclerView));
+                Log.d("Debug","Open Nav Drawer FROM nav_bar_main_title");
+            }
+        });
+
+        getSupportFragmentManager().addOnBackStackChangedListener(new FragmentManager.OnBackStackChangedListener() {
+
+            @Override
+            public void onBackStackChanged() {
+                Fragment f = getSupportFragmentManager().findFragmentById(R.id.container);
+                if (f != null) {
+                    updateSubmenuAndTitle(f);
+                }
+            }
+        });
+    } //***  end OnCreate  ***
+
+    private void updateSubmenuAndTitle(Fragment f) {
+        String fragClassName = f.getClass().getSimpleName();
+        TextView title = (TextView) findViewById(R.id.nav_bar_title);
+
+        if(fragClassName.equals("Fragment_Profile_Overview") || fragClassName.equals("Fragment_Profile_ContactANDEmployer")
+                || fragClassName.equals("Fragment_Profile_DependantsANDBeneficiaries")){
+            submenu_bar.setVisibility(View.VISIBLE);
+        }else{
+            submenu_bar.setVisibility(View.GONE);
+        }
+
+        switch(fragClassName){
+        case "Fragment_Profile_Overview":
+            title.setText(PROFILE);
+            setSubmenuTitle(submenu_profile[0]);
+            setSubmenuOptions(submenu_profile);
+            break;
+        case "Fragment_Profile_ContactANDEmployer":
+            title.setText(PROFILE);
+            setSubmenuTitle(submenu_profile[1]);
+            setSubmenuOptions(submenu_profile);
+            break;
+        case "Fragment_Profile_DependantsANDBeneficiaries":
+            title.setText(PROFILE);
+            setSubmenuTitle(submenu_profile[2]);
+            setSubmenuOptions(submenu_profile);
+            break;
+        case "Fragment_ClaimHistory":
+            title.setText(CLAIMS_HISTORY);
+            break;
+        case "Fragment_BenefitCoverage":
+                title.setText(BENEFIT_COVERAGE);
+                break;
+        case "Fragment_Documents":
+            title.setText(DOCUMENTS);
+            break;
+        default:
+            title.setText(WELCOME);
+            break;
+        }
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            FragmentManager fm = getSupportFragmentManager();
+            fm.popBackStackImmediate(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+            tag = WELCOME;
+            TextView title = (TextView) findViewById(R.id.nav_bar_title);
+            title.setText(tag);
+            fm.beginTransaction()
+                    .replace(R.id.container,new Fragment_Welcome(), tag)
+                    .commit();
+            return true;
+        }
+        if(id == R.id.profile_icon){
+            tag = PROFILE;
+            submenu_bar.setVisibility(View.VISIBLE);
+
+            TextView title = (TextView) findViewById(R.id.nav_bar_title);
+            title.setText(tag);
+            setSubmenuOptions(submenu_profile);
+            setSubmenuTitle(submenu_profile[0]);
+
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction()
+                    .replace(R.id.container, new Fragment_Profile_Overview(), tag)
+                    .addToBackStack(tag)
+                    .commit();
             return true;
         }
 
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+
+        // Checks the orientation of the screen
+        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            setSubmenuButton();
+        } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
+            setSubmenuButton();
+        }
+    }
 
 
-    public void setSubmenuButton(){
+    public void setSubmenuButton() {
 
-        button1 = (Button) findViewById(R.id.submenu_button);
-
-        //Creating the instance of PopupMenu
-        popup = new PopupMenu(MainActivity.this, button1);
-
-        popup.getMenu().add(Menu.NONE,0,0,"General Information");
-        popup.getMenu().add(Menu.NONE,1,1,"Contact Information");
-        popup.getMenu().add(Menu.NONE,2,2,"Employer");
-        popup.getMenu().add(Menu.NONE,3,3,"Dependents");
-        popup.getMenu().add(Menu.NONE,4,4,"Life Insurance Beneficiaries");
-        //Inflating the Popup using xml file
-        popup.getMenuInflater()
-                .inflate(R.menu.submenu, popup.getMenu());
+        submenu_button = (Button) findViewById(R.id.submenu_button);
 
 
-        button1.setOnClickListener(new View.OnClickListener() {
+        submenu_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                //PUT popup HERE TO DYNAMICALLY CHANGE THE ITEMS IN LIST
-
-                //registering popup with OnMenuItemClickListener
                 popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     public boolean onMenuItemClick(MenuItem item) {
-                        Toast.makeText(
-                                MainActivity.this,
-                                "You Clicked : " + item.getTitle(),
-                                Toast.LENGTH_SHORT
-                        ).show();
-
-                        TextView submenuText = (TextView) findViewById(R.id.submenu_text);
-                        submenuText.setText(item.getTitle());
 
                         try {
-
                             Fragment next_transition = null;
+                            Fragment[] fragments_main = null;
 
-                            switch (item.getItemId()) {
-                                case 0:
-                                    next_transition = new Fragment_Profile_GeneralInfo();
-                                    break;
-                                case 1:
-                                    next_transition = new Fragment_Profile_ContactInfo();
-                                    break;
-                                case 2:
-                                    next_transition = new Fragment_Profile_Employer();
-                                    break;
-                                case 3:
-                                    next_transition = new Fragment_Profile_Dependants();
-                                    break;
-                                case 4:
-                                    next_transition = new Fragment_Profile_LifeInsur();
-                                    break;
-                                default:
-                                    break;
+                            //TRANSITION FRAGMENTS
+                            Fragment[] fragments_profile = {new Fragment_Profile_Overview(), new Fragment_Profile_ContactANDEmployer(),
+                                    new Fragment_Profile_DependantsANDBeneficiaries()};
+                            Fragment[] fragments_claimshistory = {new Fragment_ClaimHistory()};
+                            Fragment[] fragments_benefitcoverage = {new Fragment_BenefitCoverage()};
+
+
+                            //MAIN FRAGMENTS
+                            if (tag.equalsIgnoreCase(PROFILE)) {
+                                fragments_main = fragments_profile;
+                            } else if (tag.equalsIgnoreCase(CLAIMS_HISTORY)) {
+                                fragments_main = fragments_claimshistory;
+                            } else if (tag.equalsIgnoreCase(BENEFIT_COVERAGE)) {
+                                fragments_main = fragments_benefitcoverage;
                             }
 
+                            setSubmenuTitle((String) item.getTitle());
+                            next_transition = fragments_main[item.getItemId()];
+
                             FragmentManager fm = getSupportFragmentManager();
-                            fm.beginTransaction()
-                                    .replace(R.id.container, next_transition)
+                                    fm.beginTransaction()
+                                    .replace(R.id.container, next_transition, tag)
+                                    .addToBackStack(tag)
                                     .commit();
 
                         } catch (Exception e) {
                             System.out.println(e.getMessage());
                         }
 
-
                         return true;
                     }
                 });
 
-                popup.show(); //showing popup menu
+                popup.show();
             }
-        }); //closing the setOnClickListener method
-
+        });
     }
+
+    public void setSubmenuOptions(String[] s) {
+
+        popup = new PopupMenu(MainActivity.this, submenu_button);
+
+        for(int i=0;i<s.length;i++){
+            popup.getMenu().add(Menu.NONE,i,i,s[i]);
+        }
+        popup.getMenuInflater()
+                .inflate(R.menu.submenu, popup.getMenu());
+    }
+
+    public void setSubmenuTitle(String title){
+        TextView submenuText = (TextView) findViewById(R.id.submenu_text);
+        submenuText.setText(title);
+    }
+
+
+    public void doNothing(View v){
+        //DO NOT DELETE
+        //do nothing onClick of claim header
+    }
+
+
+
 }

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- This is the line -->
+    <item>
+        <shape>
+            <corners android:topLeftRadius="8dp"
+                android:topRightRadius="8dp"/>
+            <solid android:color="@color/FragmentTitle"></solid>
+        </shape>
+    </item>
+    <!-- This is the main color -->
+    <item android:top="1dp" android:left="1dp" android:right="1dp" android:bottom="1dp">
+        <shape>
+            <padding android:bottom="2dp" android:top="2dp" android:left="2dp"  android:right="2dp"></padding>
+            <corners android:topLeftRadius="8dp"
+                android:topRightRadius="8dp"/>
+            <solid android:color="@color/ClaimRow"></solid>
+        </shape>
+    </item>
+</layer-list>
