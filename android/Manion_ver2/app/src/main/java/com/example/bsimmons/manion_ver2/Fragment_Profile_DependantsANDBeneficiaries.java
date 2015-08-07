@@ -47,4 +47,5 @@ public class Fragment_Profile_DependantsANDBeneficiaries extends Fragment {
 //        listView.setAdapter(adapter);
 
     }
+
 }

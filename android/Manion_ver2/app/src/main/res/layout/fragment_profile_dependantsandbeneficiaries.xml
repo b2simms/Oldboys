@@ -58,7 +58,8 @@
         android:id="@+id/textView61"
         android:layout_below="@+id/text38"
         android:layout_alignLeft="@+id/textView101"
-        android:layout_alignStart="@+id/textView101" />
+        android:layout_alignStart="@+id/textView101"
+        android:layout_marginTop="10dp" />
 
     <TextView
         android:layout_width="match_parent"

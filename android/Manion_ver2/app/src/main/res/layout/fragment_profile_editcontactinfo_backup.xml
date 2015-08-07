@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/White" >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email:"
+            android:id="@+id/textView24"
+            android:textStyle="bold"
+            android:textColor="@color/FragmentTitle"
+            android:textSize="14dp"
+            android:layout_above="@+id/edit_email"
+            android:layout_alignLeft="@+id/edit_email"
+            android:layout_alignStart="@+id/edit_email" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="carolyn.muir"
+            android:id="@+id/edit_email"
+            android:paddingLeft="10dp"
+            android:layout_alignBottom="@+id/textView32"
+            android:layout_toRightOf="@+id/textView26"
+            android:layout_toEndOf="@+id/textView26"
+            android:layout_marginLeft="140dp"
+            android:layout_marginBottom="50dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Address:"
+            android:id="@+id/textView26"
+            android:textStyle="bold"
+            android:textColor="@color/FragmentTitle"
+            android:textSize="14dp"
+            android:layout_alignTop="@+id/textView30"
+            android:layout_alignLeft="@+id/textView32"
+            android:layout_alignStart="@+id/textView32"
+            android:layout_marginBottom="10dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="45 Huntington Ln"
+            android:id="@+id/edit_address_st"
+            android:layout_below="@+id/textView26"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="10dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="St. Catherines, ON "
+            android:id="@+id/edit_address_city"
+            android:layout_below="@+id/edit_address_st"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="10dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="L2S 3R5"
+            android:id="@+id/edit_address_postal"
+            android:layout_below="@+id/edit_address_city"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone:"
+            android:id="@+id/textView30"
+            android:textStyle="bold"
+            android:textColor="@color/FragmentTitle"
+            android:textSize="14dp"
+            android:layout_below="@+id/relativeLayout4"
+            android:layout_alignLeft="@+id/edit_email"
+            android:layout_alignStart="@+id/edit_email"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(506)675-2525"
+            android:id="@+id/edit_phone_num"
+            android:layout_below="@+id/textView30"
+            android:layout_alignLeft="@+id/textView30"
+            android:layout_alignStart="@+id/textView30"
+            android:paddingLeft="10dp"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Banking:"
+            android:textColor="@color/FragmentTitle"
+            android:id="@+id/textView32"
+            android:layout_below="@+id/edit_address_postal"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="14dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="69042-837-0126074449"
+            android:id="@+id/edit_bank_number"
+            android:layout_below="@+id/textView32"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="10dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="867 Hepcoe Credit Union Ltd"
+            android:id="@+id/edit_bank_location"
+            android:layout_below="@+id/edit_bank_number"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bank_blurb"
+            android:id="@+id/textView35"
+            android:layout_below="@+id/edit_bank_location"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="20dp"
+            android:textStyle="italic"
+            android:textSize="12dp"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/row_header_middle"
+            android:id="@+id/relativeLayout4"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contact Information"
+                android:textColor="@color/FragmentTitle"
+                android:id="@+id/textView92"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="60dp"
+                android:layout_height="35dp"
+                android:text="Edit"
+                android:id="@+id/edit_save"
+                android:layout_marginRight="15dp"
+                android:layout_marginEnd="15dp"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/HighlightText" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:id="@+id/textView12"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="\@gmail.com"
+            android:id="@+id/edit_email2"
+            android:paddingLeft="10dp"
+            android:layout_below="@+id/edit_address_postal"
+            android:layout_alignLeft="@+id/edit_email"
+            android:layout_alignStart="@+id/edit_email" />
+
+    </RelativeLayout>
+</ScrollView>

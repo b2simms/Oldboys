@@ -1,5 +1,6 @@
 package com.example.bsimmons.manion_ver2;
 
+import android.content.Context;
 import android.content.res.Configuration;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -17,6 +18,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -29,6 +32,7 @@ public class MainActivity extends ActionBarActivity {
     private final String BENEFIT_COVERAGE = "Benefit Coverage";
     private final String DOCUMENTS = "Documents";
     private final String WELCOME = "Welcome";
+    private final String EDIT_CONTACT_INFO = "Edit Contact Info";
 
     //SUBMENUS
     String[] submenu_profile = {"Overview","Contact/Employer","Dependents/Beneficiaries"};
@@ -183,6 +187,11 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
+                View view = getCurrentFocus();
+                if (view != null) {
+                    InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                    imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+                }
             }
 
             @Override
@@ -230,7 +239,19 @@ public class MainActivity extends ActionBarActivity {
                 }
             }
         });
+
+
     } //***  end OnCreate  ***
+
+//    @Override
+//    public void onResume(){
+//        super.onResume();
+//        // Hide status bar
+//        View decorView = getWindow().getDecorView();
+//        decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
+//
+//    }
+
 
     private void updateSubmenuAndTitle(Fragment f) {
         String fragClassName = f.getClass().getSimpleName();
@@ -268,6 +289,10 @@ public class MainActivity extends ActionBarActivity {
         case "Fragment_Documents":
             title.setText(DOCUMENTS);
             break;
+        case "Fragment_Profile_EditContactInfo":
+            //title.setText(EDIT_CONTACT_INFO);
+            break;
+
         default:
             title.setText(WELCOME);
             break;
@@ -333,7 +358,6 @@ public class MainActivity extends ActionBarActivity {
 
         submenu_button = (Button) findViewById(R.id.submenu_button);
 
-
         submenu_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -365,7 +389,7 @@ public class MainActivity extends ActionBarActivity {
                             next_transition = fragments_main[item.getItemId()];
 
                             FragmentManager fm = getSupportFragmentManager();
-                                    fm.beginTransaction()
+                            fm.beginTransaction()
                                     .replace(R.id.container, next_transition, tag)
                                     .addToBackStack(tag)
                                     .commit();

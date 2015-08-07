@@ -119,7 +119,7 @@ public class Fragment_Documents extends Fragment {
     }
 
     public void openPopupWindow(String docName, String docInfo, String docSize, String docDate, final String pdfFile, int windowNum) {
-        LayoutInflater layoutInflater = (LayoutInflater) getActivity().getBaseContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);  //ERRORS HERE!!
+        LayoutInflater layoutInflater = (LayoutInflater) getActivity().getBaseContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         final View popupView = layoutInflater.inflate(R.layout.popupwindow, null);
 
@@ -169,6 +169,7 @@ public class Fragment_Documents extends Fragment {
         popupWindow.setOutsideTouchable(false);
         popupWindow.setFocusable(true);
         popupWindow.update();
+
 
 //        switch(windowNum) {
 //            case ONE:
@@ -222,5 +223,6 @@ public class Fragment_Documents extends Fragment {
 
 
     }
+
 
 }

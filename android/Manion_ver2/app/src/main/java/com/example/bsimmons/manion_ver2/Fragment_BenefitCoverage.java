@@ -63,4 +63,5 @@ public class Fragment_BenefitCoverage extends Fragment {
         listView.setAdapter(adapter);
 
     }
+
 }

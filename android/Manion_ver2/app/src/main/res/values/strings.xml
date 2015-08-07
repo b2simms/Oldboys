@@ -6,4 +6,5 @@
     <string name="openDrawer">Open navigation drawer</string>
     <string name="closeDrawer">Close navigation drawer</string>
     <string name="welcome_text">We Care, You Benefit.</string>
+    <string name="bank_blurb">This bank account information will be used for the following payments: <b>Dental/Medical Claims</b></string>
 </resources>

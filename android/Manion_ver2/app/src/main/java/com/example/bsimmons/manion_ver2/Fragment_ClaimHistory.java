@@ -3,6 +3,7 @@ package com.example.bsimmons.manion_ver2;
 /**
  * Created by bsimmons on 10/07/2015.
  */
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -20,8 +21,6 @@ public class Fragment_ClaimHistory extends Fragment {
     ExpandableListView lv;
     private List<Info_Row> listDataHeader;
     private HashMap<String,Info_Claims> listDataChild;
-    private boolean isGroupExpanded = false;
-
 
     public Fragment_ClaimHistory() {
 
@@ -30,7 +29,8 @@ public class Fragment_ClaimHistory extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        prepareListData();
+        AsyncDataLoading adl = new AsyncDataLoading();
+        adl.execute(0);
     }
 
     @Override
@@ -72,8 +72,6 @@ public class Fragment_ClaimHistory extends Fragment {
         });
     }
 
-
-
     public void  prepareListData() {
 
         listDataHeader = new ArrayList<Info_Row>();
@@ -99,7 +97,7 @@ public class Fragment_ClaimHistory extends Fragment {
         listDataHeader.add(new Info_Row("12 Sep 2014", "Medical",true));
         listDataHeader.add(new Info_Row(new String[]{"9","Medical","Janelle Muir","Blood Pressure","66.28"}));
         listDataHeader.add(new Info_Row(new String[]{"10","Medical","John Muir","Blood Pressure","44.29"}));
-        listDataHeader.add(new Info_Row(new String[]{"11","Medical","John Muir","Blood Pressure","44.29"}));
+        listDataHeader.add(new Info_Row(new String[]{"11","Medical","John Muir","Ankle Brace","90.78"}));
         listDataHeader.add(new Info_Row("1 Sep 2014", "Medical",true));
         listDataHeader.add(new Info_Row(new String[]{"12","Medical","Janelle Muir","Blood Pressure","23.28"}));
         listDataHeader.add(new Info_Row("10 Jun 2014", "Medical",true));
@@ -108,19 +106,18 @@ public class Fragment_ClaimHistory extends Fragment {
 
 
         Info_Claims list1 = new Info_Claims("Janelle Muir", "4 Mar 2015", "Blood Pressure Monitor", "54.29", "6 Mar 2015", "Drug Card");
-
         Info_Claims list2 = new Info_Claims("Janelle Muir", "15 Dec 2014", "Blood Pressure Monitor", "54.29", "6 Mar 2015", "Cheque 97092 Issued 17 Oct 2014");
         Info_Claims list3 = new Info_Claims("Janelle Muir", "1 Mar 2015", "Eye Examination", "212.99", "3 Nov 2014", "Cheque 97092 Issued 17 Oct 2014");
-        Info_Claims list4 = new Info_Claims("John Muir", "1 Mar 2015", "Blood Pressure Monitor", "44.29", "16 Oct 2014", "Drug Card");
-        Info_Claims list5 = new Info_Claims("John Muir", "1 Mar 2015", "Chipped Right Cuspid", "31.00", "16 Oct 2014", "Cheque 97092 Issued 17 Oct 2014");
-        Info_Claims list6 = new Info_Claims("John Muir", "1 Mar 2015", "Wisdom Teeth Removal", "18.00", "16 Oct 2014", "Drug Card");
+        Info_Claims list4 = new Info_Claims("John Muir", "1 Mar 2015", "Blood Pressure Monitor", "31.00", "16 Oct 2014", "Drug Card");
+        Info_Claims list5 = new Info_Claims("John Muir", "1 Mar 2015", "Chipped Right Cuspid", "18.00", "16 Oct 2014", "Cheque 97092 Issued 17 Oct 2014");
+        Info_Claims list6 = new Info_Claims("John Muir", "1 Mar 2015", "Wisdom Teeth Removal", "110.00", "16 Oct 2014", "Drug Card");
         Info_Claims list7 = new Info_Claims("Janelle Muir", "1 Mar 2015", "Blood Pressure Monitor", "66.28", "22 Sep 2014", "Cheque 97092 Issued 17 Oct 2014");
         Info_Claims list8 = new Info_Claims("John Muir", "1 Mar 2015", "Blood Pressure Monitor", "44.29", "22 Sep 2014", "Cheque 97092 Issued 17 Oct 2014");
-        Info_Claims list9 = new Info_Claims("John Muir", "1 Mar 2015", "Blood Pressure Monitor", "44.29", "22 Sep 2014", "Cheque 97092 Issued 17 Oct 2014");
+        Info_Claims list9 = new Info_Claims("John Muir", "1 Mar 2015", "Ankle Brace", "90.78", "22 Sep 2014", "Cheque 97092 Issued 17 Oct 2014");
         Info_Claims list10 = new Info_Claims("Janelle Muir", "1 Mar 2015", "Blood Pressure Monitor", "66.28", "22 Sep 2014", "Cheque 97092 Issued 17 Oct 2014");
         Info_Claims list11 = new Info_Claims("John Muir", "1 Mar 2015", "Blood Pressure Monitor", "44.29", "22 Sep 2014", "Cheque 97092 Issued 17 Oct 2014");
         Info_Claims list12 = new Info_Claims("John Muir", "1 Mar 2015", "Blood Pressure Monitor", "44.29", "22 Sep 2014", "Cheque 97092 Issued 17 Oct 2014");
-        Info_Claims list13 = new Info_Claims("Jenelle Muir", "1 Mar 2015", "Blood Pressure Monitor", "44.29", "1 Sep 2014", "Cheque 97092 Issued 17 Oct 2014");
+        Info_Claims list13 = new Info_Claims("Jenelle Muir", "1 Mar 2015", "Blood Pressure Monitor", "23.28", "1 Sep 2014", "Cheque 97092 Issued 17 Oct 2014");
         Info_Claims list14 = new Info_Claims("John Muir", "1 Mar 2015", "Broken Leg", "166.29", "10 Jun 2014", "Cheque 97092 Issued 17 Oct 2014");
 
         listDataChild.put(listDataHeader.get(0).getDesc(), list0);
@@ -148,4 +145,18 @@ public class Fragment_ClaimHistory extends Fragment {
 
 
     }
+    public class AsyncDataLoading extends AsyncTask<Integer,Integer,Long> {
+        protected Long doInBackground(Integer... ints) {
+            prepareListData();
+            return 1L;
+        }
+
+        protected void onProgressUpdate(Integer... progress) {
+        }
+
+        protected void onPostExecute(Long result) {
+
+        }
+    }
+
 }
