@@ -11,7 +11,7 @@ public final class Tables {
     public Tables() {}
 
     /* Inner class that defines the table contents */
-    public static abstract class TableInstance implements BaseColumns {
+    public static abstract class Team implements BaseColumns {
         public static final String TABLE_NAME = "Team";
         public static final String COLUMN_NAME_NAME = "name";
         public static final String COLUMN_NAME_CITY = "city";
