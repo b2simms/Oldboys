@@ -10,8 +10,6 @@
         <activity
             android:name=".MainActivity"
             android:configChanges="orientation|screenSize|keyboardHidden">
-            <!--android:label="@string/nav_bar_title"
-            android:id="@+id/mainActivity" -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

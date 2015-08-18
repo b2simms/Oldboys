@@ -33,8 +33,9 @@ public class MainActivity extends ActionBarActivity {
         // Gets the data repository in write mode
         db = mDbHelper.getWritableDatabase();
 
-        //mDbHelper.onUpgrade(db,1,2);
-        //if(isTableExisting(db,"FifaDatabase")) {
+        //used to
+        if(!isTableColumnExisting(db,Tables.TableInstance.TABLE_NAME, Tables.TableInstance.COLUMN_NAME_NAME)) {
+            mDbHelper.onUpgrade(db,1,2);
             // Create a new map of values, where column names are the keys
             ContentValues values = new ContentValues();
             values.put(Tables.TableInstance.COLUMN_NAME_NAME, "D");
@@ -47,7 +48,7 @@ public class MainActivity extends ActionBarActivity {
             );
 
             Log.e("Debug","Create table");
-       // }
+       }
 
         // Define a projection that specifies which columns from the database
         // you will actually use after this query.
@@ -115,17 +116,22 @@ public class MainActivity extends ActionBarActivity {
                 null);
     }
 
-    public boolean isTableExisting(SQLiteDatabase db, String tableName) {
+    public boolean isTableColumnExisting(SQLiteDatabase db, String tableName, String columnName) {
 
-        Cursor cursor = db.rawQuery("select DISTINCT tbl_name from sqlite_master where tbl_name = '"+tableName+"'", null);
-        if(cursor!=null) {
-            if(cursor.getCount()>0) {
-                cursor.close();
-                return true;
+        try{
+            Log.d("Debug", "Query fails here?");
+            //Cursor cursor = db.rawQuery("select * from " + tableName, null);
+            Cursor cursor = db.query(false, tableName,new String[]{Tables.TableInstance.COLUMN_NAME_NAME},null,null,null,null,null,null,null);
+            cursor.moveToFirst();
+            Log.d("Database: ", cursor.getString(cursor.getColumnIndex(columnName)));
+            for(int i = 0; i < cursor.getCount();i++){
+                Log.d("Debug","Row = " + cursor.getPosition());
             }
-            cursor.close();
+
+            return true;
+        } catch (Exception e){
+            return false;
         }
-        return false;
     }
 
     @Override

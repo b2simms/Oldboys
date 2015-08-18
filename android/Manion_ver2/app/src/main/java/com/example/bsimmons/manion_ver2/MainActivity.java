@@ -27,12 +27,18 @@ import android.widget.TextView;
 
 public class MainActivity extends ActionBarActivity {
 
+    public static final String FRAGMENT_PROFILE_OVERVIEW = "Fragment_Profile_Overview";
+    public static final String FRAGMENT_PROFILE_CONTACT_AND_EMPLOYER = "Fragment_Profile_ContactANDEmployer";
+    public static final String FRAGMENT_PROFILE_DEPENDANTS_AND_BENEFICIARIES = "Fragment_Profile_DependantsANDBeneficiaries";
+    public static final String FRAGMENT_CLAIM_HISTORY = "Fragment_ClaimHistory";
+    public static final String FRAGMENT_BENEFIT_COVERAGE = "Fragment_BenefitCoverage";
+    public static final String FRAGMENT_DOCUMENTS = "Fragment_Documents";
+    public static final String FRAGMENT_PROFILE_EDIT_CONTACT_INFO = "Fragment_Profile_EditContactInfo";
     private final String PROFILE = "Profile";
     private final String CLAIMS_HISTORY = "Claims History";
     private final String BENEFIT_COVERAGE = "Benefit Coverage";
     private final String DOCUMENTS = "Documents";
     private final String WELCOME = "Welcome";
-    private final String EDIT_CONTACT_INFO = "Edit Contact Info";
 
     //SUBMENUS
     String[] submenu_profile = {"Overview","Contact/Employer","Dependents/Beneficiaries"};
@@ -239,58 +245,45 @@ public class MainActivity extends ActionBarActivity {
                 }
             }
         });
-
-
     } //***  end OnCreate  ***
-
-//    @Override
-//    public void onResume(){
-//        super.onResume();
-//        // Hide status bar
-//        View decorView = getWindow().getDecorView();
-//        decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
-//
-//    }
-
 
     private void updateSubmenuAndTitle(Fragment f) {
         String fragClassName = f.getClass().getSimpleName();
         TextView title = (TextView) findViewById(R.id.nav_bar_title);
 
-        if(fragClassName.equals("Fragment_Profile_Overview") || fragClassName.equals("Fragment_Profile_ContactANDEmployer")
-                || fragClassName.equals("Fragment_Profile_DependantsANDBeneficiaries")){
+        if(fragClassName.equals(FRAGMENT_PROFILE_OVERVIEW) || fragClassName.equals(FRAGMENT_PROFILE_CONTACT_AND_EMPLOYER)
+                || fragClassName.equals(FRAGMENT_PROFILE_DEPENDANTS_AND_BENEFICIARIES)){
             submenu_bar.setVisibility(View.VISIBLE);
         }else{
             submenu_bar.setVisibility(View.GONE);
         }
 
         switch(fragClassName){
-        case "Fragment_Profile_Overview":
+        case FRAGMENT_PROFILE_OVERVIEW:
             title.setText(PROFILE);
             setSubmenuTitle(submenu_profile[0]);
             setSubmenuOptions(submenu_profile);
             break;
-        case "Fragment_Profile_ContactANDEmployer":
+        case FRAGMENT_PROFILE_CONTACT_AND_EMPLOYER:
             title.setText(PROFILE);
             setSubmenuTitle(submenu_profile[1]);
             setSubmenuOptions(submenu_profile);
             break;
-        case "Fragment_Profile_DependantsANDBeneficiaries":
+        case FRAGMENT_PROFILE_DEPENDANTS_AND_BENEFICIARIES:
             title.setText(PROFILE);
             setSubmenuTitle(submenu_profile[2]);
             setSubmenuOptions(submenu_profile);
             break;
-        case "Fragment_ClaimHistory":
+        case FRAGMENT_CLAIM_HISTORY:
             title.setText(CLAIMS_HISTORY);
             break;
-        case "Fragment_BenefitCoverage":
+        case FRAGMENT_BENEFIT_COVERAGE:
                 title.setText(BENEFIT_COVERAGE);
                 break;
-        case "Fragment_Documents":
+        case FRAGMENT_DOCUMENTS:
             title.setText(DOCUMENTS);
             break;
-        case "Fragment_Profile_EditContactInfo":
-            //title.setText(EDIT_CONTACT_INFO);
+        case FRAGMENT_PROFILE_EDIT_CONTACT_INFO:
             break;
 
         default:
