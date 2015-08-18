@@ -16,7 +16,6 @@ import android.widget.EditText;
 
 public class MainActivity extends ActionBarActivity {
 
-    SQLiteDatabase db;
     private Team team;
 
     @Override
@@ -33,7 +32,8 @@ public class MainActivity extends ActionBarActivity {
 
         //used to check if column exists in table
         if(!mDbHelper.isTeamColumnExisting(Tables.Team.TABLE_NAME, Tables.Team.COLUMN_NAME_NAME)) {
-            mDbHelper.onUpgrade(db,1,2);
+            SQLiteDatabase db = mDbHelper.getWritableDatabase();
+            mDbHelper.onUpgrade(db, 1,2);
             team = new Team("New","New");
             mDbHelper.insertTeam(team);
        }

@@ -42,10 +42,12 @@ public class DbHelper extends SQLiteOpenHelper {
         db.execSQL(SQL_DELETE_ENTRIES);
         onCreate(db);
     }
-    public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+    public void onDowngrade(int oldVersion, int newVersion) {
+        db = getWritableDatabase();
         onUpgrade(db, oldVersion, newVersion);
     }
-    public void deleteTable(SQLiteDatabase db){
+    public void deleteTable(){
+        db = getWritableDatabase();
         db.execSQL(SQL_DELETE_ENTRIES);
     }
 
