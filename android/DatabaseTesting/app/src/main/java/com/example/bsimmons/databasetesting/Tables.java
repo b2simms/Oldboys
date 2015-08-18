@@ -22,6 +22,7 @@ public final class Tables {
 //        public static final String TOURNEY_ID = "tourney_id";
 //        public static final String TEAM1_ID = "team1_id";
 //        public static final String TEAM2_ID = "team2_id";
+//        public static final String DATE = "date";
 //
 //    }
 }

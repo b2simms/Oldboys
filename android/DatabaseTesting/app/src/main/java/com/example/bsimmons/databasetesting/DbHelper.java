@@ -104,6 +104,7 @@ public class DbHelper extends SQLiteOpenHelper {
         String name = c.getString(c.getColumnIndex(Tables.Team.COLUMN_NAME_NAME));
         String city = c.getString(c.getColumnIndex(Tables.Team.COLUMN_NAME_CITY));
         Log.d("getTeam", name + " : " + city);
+
         return new Team(name, city);
     }
 
