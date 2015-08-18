@@ -296,7 +296,6 @@ public class Fragment_Schedule extends Fragment {
         this.edit = edit;
     }
 
-
     private class HttpAsyncTask extends AsyncTask<String, Void, String> {
 
         ProgressDialog dialog;

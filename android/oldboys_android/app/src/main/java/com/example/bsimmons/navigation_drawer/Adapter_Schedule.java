@@ -64,7 +64,6 @@ public class Adapter_Schedule extends ArrayAdapter<String> {
                         else {
                             View scheduleView = generateScheduleView(position, parent, false);
                             return scheduleView;
-
                         }
                     }else{
                         View scoreBoard = generateScoreBoard(position, parent);
