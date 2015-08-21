@@ -62,6 +62,17 @@ public class MainActivity extends ActionBarActivity {
 
             }
         });
+
+        Button restCall = (Button) findViewById(R.id.button_rest_call);
+        restCall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(getApplicationContext(), RestApiCall.class);
+                Log.i("Rest Call Button Clicked", "Calling rest class");
+                startActivity(i);
+            }
+        });
     }
 
     @Override

@@ -170,30 +170,6 @@ public class Fragment_Documents extends Fragment {
         popupWindow.setFocusable(true);
         popupWindow.update();
 
-
-//        switch(windowNum) {
-//            case ONE:
-//                popupWindow1 = popupWindow;
-//                popupWindow1.
-//                break;
-//            case TWO:
-//                popupWindow2 = popupWindow;
-//                break;
-//            case THREE:
-//                popupWindow3 = popupWindow;
-//                break;
-//            case FOUR:
-//                popupWindow4 = popupWindow;
-//                break;
-//            case FIVE:
-//                popupWindow5 = popupWindow;
-//                break;
-//            default:
-//                popupWindow1 = popupWindow;
-//                break;
-//        }
-
-
     }
 
     public void openPDF(String fileLocation){
@@ -217,11 +193,6 @@ public class Fragment_Documents extends Fragment {
         }else{
             Toast.makeText(getActivity(), "pdf file does not exist; did you delete it off your phone?", Toast.LENGTH_LONG).show();
         }
-
-
-
-
-
     }
 
 
