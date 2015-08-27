@@ -29,8 +29,6 @@ public class Fragment_BenefitCoverage extends Fragment {
     public void onStart() {
         super.onStart();
 
-
-
         // Get ListView object from xml
         listView = (ListView) getView().findViewById(R.id.benefitCoverageListView);
         listView.setDivider(null);

@@ -50,6 +50,7 @@ public class MainActivity extends ActionBarActivity {
             R.drawable.icon_xbox,
             R.drawable.icon_library};
 
+
     private Button submenu_button;
     private PopupMenu popup;
     private String tag = "";

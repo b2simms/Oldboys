@@ -69,7 +69,7 @@ public class MainActivity extends ActionBarActivity {
             public void onClick(View v) {
 
                 Intent i = new Intent(getApplicationContext(), RestApiCall.class);
-                Log.i("Rest Call Button Clicked", "Calling rest class");
+                Log.i("Rest Button", "Calling rest class");
                 startActivity(i);
             }
         });
